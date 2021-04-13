@@ -48,10 +48,10 @@ $(".tabs a span").toArray().forEach(function (element) {
 			});
 		}
 		else if ($element.parent().is(":nth-child(4)")) {
-				$(".content").append(
+			$(".content").append(
 				'<input type="text" class="inp">'+ '<button class="btn">+</button>'
 			);
-				var newToDo;
+			var newToDo;
 			$('.btn').on('click',function(){
 			if (($(".inp").val() !== "") && (($(".inp").val()).trim().length > 0)){
 				newToDo= $('.inp').val();
