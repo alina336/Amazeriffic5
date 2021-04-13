@@ -31,9 +31,6 @@ var organizeByTags = function (toDoObjects) {
 	return tagObjects;
 };
 
-
-
-
 var main = function (toDoObjects) { 
 	"use strict";
 	var toDos = toDoObjects.map(function (toDo) {
@@ -69,7 +66,7 @@ var main = function (toDoObjects) {
 				else if ($element.parent().is(":nth-child(3)")) {
 					// ЭТО КОД ДЛЯ ВКЛАДКИ ТЕГИ
 					console.log("щелчок на вкладке Теги");
-					var organizedByTag = organizeByTag(toDoObjects);
+					var organizedByTag = organizeByTags(toDoObjects);
 					organizedByTag.forEach(function (tag) {
 						var $tagName = $("<h3>").text(tag.name),
 						$content = $("<ul>");
@@ -168,7 +165,7 @@ var main = function (toDoObjects) {
 	});
 };
 $(document).ready(function () {
-	$.getJSON("todos.json", function (toDoObjects) {
+	$.getJSON("js/todos.json", function (toDoObjects) {
 	// вызов функции main с аргументом в виде объекта toDoObjects 
 		main(toDoObjects);
 	});
