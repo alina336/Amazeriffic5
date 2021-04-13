@@ -35,9 +35,7 @@ $(".tabs a span").toArray().forEach(function (element) {
 		else if ($element.parent().is(":nth-child(3)")) {
 			// ЭТО КОД ДЛЯ ВКЛАДКИ ТЕГИ
 			console.log("щелчок на вкладке Теги");
-			var organizedByTag = [
-				/* и т. д. */
-			];
+			var organizedByTag = organizeByTag(toDoObjects);
 			organizedByTag.forEach(function (tag) {
 				var $tagName = $("<h3>").text(tag.name),
 				$content = $("<ul>");
