@@ -72,6 +72,12 @@ $(".tabs a:first-child span").trigger("click");
 
 var main = function () { 
 	"use strict";
+	var toDos = toDoObjects.map(function (toDo) {
+		// просто возвращаем описание этой задачи
+		return toDo.description;
+	});
+	// сейчас весь старый код должен работать как раньше!
+
 	var addCommentFromInputBox = function () {
 		var $new_comment;
 		if ($(".comment-input input").val() !== "") {
