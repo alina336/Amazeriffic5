@@ -33,6 +33,9 @@ $(".tabs a span").toArray().forEach(function (element) {
 			$("main .content").append($content);
 		} 
 		else if ($element.parent().is(":nth-child(3)")) {
+						// ЭТО КОД ДЛЯ ВКЛАДКИ ТЕГИ
+		}
+		else if ($element.parent().is(":nth-child(4)")) {
 				$(".content").append(
 				'<input type="text" class="inp">'+ '<button class="btn">+</button>'
 			);
