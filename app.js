@@ -33,7 +33,21 @@ $(".tabs a span").toArray().forEach(function (element) {
 			$("main .content").append($content);
 		} 
 		else if ($element.parent().is(":nth-child(3)")) {
-						// ЭТО КОД ДЛЯ ВКЛАДКИ ТЕГИ
+			// ЭТО КОД ДЛЯ ВКЛАДКИ ТЕГИ
+			console.log("щелчок на вкладке Теги");
+			var organizedByTag = [
+				/* и т. д. */
+			];
+			organizedByTag.forEach(function (tag) {
+				var $tagName = $("<h3>").text(tag.name),
+				$content = $("<ul>");
+				tag.toDos.forEach(function (description) {
+				var $li = $("<li>").text(description);
+				$content.append($li);
+				});
+				$("main .content").append($tagName);
+				$("main .content").append($content);
+			});
 		}
 		else if ($element.parent().is(":nth-child(4)")) {
 				$(".content").append(
